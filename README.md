@@ -1,4 +1,4 @@
-# Tepee
+# Tepee: A configuration helper for the braves
 
 [![Build Status](https://travis-ci.org/appaloosa-store/tepee.svg)](https://travis-ci.org/appaloosa-store/tepee)
 
@@ -21,16 +21,16 @@ end
 ### Setting a value
 
 ```ruby
-add(:my_value, 42)
-## Defines the configuration value 'my_value', with 42 as default value.
-## If the MY_VALUE environment variable is set, it overrides 42.
-```
+class MyApp::Configuration < Tepee
+  add(:my_value, 42)
+  ## Defines the configuration value 'my_value', with 42 as default value.
+  ## If the MY_VALUE environment variable is set, it overrides 42.
 
-```ruby
-add(:my_value, 13, env_var: 'FOOBAR')
-## Defines the configuration value 'my_value', with 13 as default value.
-## If the FOOBAR environment variable is set, it overrides 13.
-## You can use this for mapping purposes!
+  add(:my_value, 13, env_var: 'FOOBAR')
+  ## Defines the configuration value 'my_value', with 13 as default value.
+  ## If the FOOBAR environment variable is set, it overrides 13.
+  ## You can use this for mapping purposes!
+end
 ```
 
 ### Fetching a value
@@ -42,11 +42,13 @@ add(:my_value, 13, env_var: 'FOOBAR')
 #### Adding a section
 
 ```ruby
-section(:billing) do
-  add :domain,        'my_domain'
-  add :api_key,       'qwerty12345'
-  add :public_key,    'my-public-key'
-  add :webhook_token, '12345azerty'
+class MyApp::Configuration < Tepee
+  section(:billing) do
+    add :domain,        'my_domain'
+    add :api_key,       'qwerty12345'
+    add :public_key,    'my-public-key'
+    add :webhook_token, '12345azerty'
+  end
 end
 ```
 
@@ -57,14 +59,16 @@ That value is either:
 #### Nesting sections
 
 ```ruby
-section(:foo) do
-  # Can be overrided by the FOO_VALUE environment variable.
-  # Accessible via MyApp::Configuration.foo.value
-  add :value, "I'm a foo value"
-   section(:bar) do
-    # Can be overrided by the FOO_BAR_VALUE environment variable.
-    # Accessible via Appaloosa::Configuration.foo.bar.value
-    add :value, "I'm a bar value"
+class MyApp::Configuration < Tepee
+  section(:foo) do
+    # Can be overrided by the FOO_VALUE environment variable.
+    # Accessible via MyApp::Configuration.foo.value
+    add :value, "I'm a foo value"
+     section(:bar) do
+      # Can be overrided by the FOO_BAR_VALUE environment variable.
+      # Accessible via Appaloosa::Configuration.foo.bar.value
+      add :value, "I'm a bar value"
+    end
   end
 end
 ```
