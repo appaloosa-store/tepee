@@ -10,7 +10,17 @@ This gem aims to make your rails app (or lib, script, ...) by making your enviro
 
 ### Setup
 
-Your conf class must inherit from Tepee.
+#### Gemfile
+
+```ruby
+# ...
+gem 'tepee'
+# ...
+```
+
+#### Code
+
+Your configuration class must inherit from Tepee.
 
 ```ruby
 class MyApp::Configuration < Tepee
@@ -61,11 +71,11 @@ That value is either:
 ```ruby
 class MyApp::Configuration < Tepee
   section(:foo) do
-    # Can be overrided by the FOO_VALUE environment variable.
+    # Can be overridden by the FOO_VALUE environment variable.
     # Accessible via MyApp::Configuration.foo.value
     add :value, "I'm a foo value"
      section(:bar) do
-      # Can be overrided by the FOO_BAR_VALUE environment variable.
+      # Can be overridden by the FOO_BAR_VALUE environment variable.
       # Accessible via Appaloosa::Configuration.foo.bar.value
       add :value, "I'm a bar value"
     end
