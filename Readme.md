@@ -1,9 +1,14 @@
+# Tepee
+
 [![Build Status](https://travis-ci.org/appaloosa-store/tepee.svg)](https://travis-ci.org/appaloosa-store/tepee)
+
 ## Purpose
+
 This gem aims to make your rails app (or lib, script, ...) by making your environment variables more maintainable by nesting them, allowing you to use your own naming conventions for them.
+
 ## Usage
+
 ### Setup
-#### Gemfile
 
 Your conf class must inherit from Tepee.
 
@@ -100,3 +105,15 @@ heroku config:set MOBILE_NOTIFICATION_USER='alice@bob.com' -a my-app
 ```
 
 But do not use the `env_var` keyword which allows to override the used environment variable name.
+
+## Contributing
+
+1. Fork it ( https://github.com/appaloosa-store/tepee/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+## Licence
+
+See the included LICENSE file for details.
