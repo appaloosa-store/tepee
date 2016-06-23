@@ -23,6 +23,7 @@ describe Tepee do
   S2_VALUE2_VALUE = 's2value2:' + SecureRandom.uuid
 
   class DummyConf < Tepee
+    add :no_default_value
     add :value123456789, 'value should be overriden, you should not see this'
     add :value987654321, VALUE2_VALUE
     section(:section1) do
@@ -35,6 +36,7 @@ describe Tepee do
     end
   end
 
+  it { expect(DummyConf.no_default_value).to be_nil }
   # At root
   it { expect(DummyConf.value123456789).to eq VALUE1_VALUE }
   it { expect(DummyConf::VALUE123456789).to eq VALUE1_VALUE }

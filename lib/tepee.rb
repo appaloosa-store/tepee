@@ -10,7 +10,7 @@ class Tepee
 
     protected
 
-    def add(name, default, env_var: "#{env_var_prefix}#{name}")
+    def add(name, default = nil, env_var: "#{env_var_prefix}#{name}")
       value = ENV[String(env_var).upcase] || default
       const_set(String(name).upcase, value)
       define_singleton_method(name) { value }
