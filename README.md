@@ -4,7 +4,7 @@
 
 ## Purpose
 
-This gem aims to make your rails app (or lib, script, ...) by making your environment variables more maintainable by nesting them, allowing you to use your own naming conventions for them.
+This gem aims to make your rails app (or lib, script, ...) configuration easier to maintain by making your environment variables nestable and allowing you to use your own naming conventions.
 
 ## Usage
 
