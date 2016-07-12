@@ -76,7 +76,7 @@ class MyApp::Configuration < Tepee
     add :value, "I'm a foo value"
      section(:bar) do
       # Can be overridden by the FOO_BAR_VALUE environment variable.
-      # Accessible via Appaloosa::Configuration.foo.bar.value
+      # Accessible via MyApp::Configuration.foo.bar.value
       add :value, "I'm a bar value"
     end
   end
