@@ -2,11 +2,13 @@
 
 [![Build Status](https://travis-ci.org/appaloosa-store/tepee.svg)](https://travis-ci.org/appaloosa-store/tepee)
 
-## Purpose
+<img align="right" height="400" src="https://s3.eu-central-1.amazonaws.com/appaloosa-design/github/Tepee-v0.2c.svg">
 
-This gem aims to make your rails app (or lib, script, ...) configuration easier to maintain by making your environment variables nestable and allowing you to use your own naming conventions.
+---
 
-## Usage
+This gem aims to make your rails app (or lib, script, etc.) configuration easier to maintain by making your environment variables nestable and allowing you to use your own naming conventions.
+
+## Install & usage
 
 ### Setup
 
