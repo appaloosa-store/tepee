@@ -1,6 +1,6 @@
 # Tepee: A configuration helper for the braves
 
-[![Build Status](https://travis-ci.org/appaloosa-store/tepee.svg)](https://travis-ci.org/appaloosa-store/tepee)
+[![Build Status](https://travis-ci.org/appaloosa-store/tepee.svg)](https://travis-ci.org/appaloosa-store/tepee) [![Dependency Status](https://dependencyci.com/github/appaloosa-store/tepee/badge)](https://dependencyci.com/github/appaloosa-store/tepee)
 
 <img align="right" height="400" src="https://s3.eu-central-1.amazonaws.com/appaloosa-design/github/Tepee-v0.2c.svg">
 
