@@ -1,6 +1,19 @@
-before_install:
-    - gem install bundler
 language: ruby
+
+before_install:
+  - gem install bundler
+
 rvm:
-    - 2.3.0
+  - 2.2
+  - 2.3
+  - 2.4
+  - 2.5
+  - ruby-head
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+
 script: bundle exec rspec spec
+
+cache: bundler
