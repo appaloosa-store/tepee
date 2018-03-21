@@ -1,5 +1,7 @@
 require 'spec_helper'
 require 'tepee'
+require 'securerandom'
+
 describe Tepee do
   # a value with a corresponding override in env
   VALUE1_VALUE = 'value1:' + SecureRandom.uuid
