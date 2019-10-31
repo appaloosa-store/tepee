@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.name = 'tepee'
   s.version = Tepee::Version::STRING
   s.platform = Gem::Platform::RUBY
-  s.required_ruby_version = '>= 2.2.0'
+  s.required_ruby_version = '>= 2.3.0'
   s.authors = ['Alexandre Ignjatovic', 'Robin Sfez', 'Benoit Tigeot', 'Christophe Valentin']
   s.description = <<-EOF
     A ruby configuration helper for the braves.
