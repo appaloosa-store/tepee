@@ -4,7 +4,7 @@
 class Tepee
   # This module holds the Tepee version information.
   module Version
-    STRING = '0.0.2'.freeze
+    STRING = '0.1.0'.freeze
 
     module_function
 
